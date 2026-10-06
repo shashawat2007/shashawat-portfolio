@@ -1,0 +1,1213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #111111;
+    overflow-x: hidden;
+    transition: 0.4s;
+}
+
+body.light {
+    background: #050b14;
+    color: #ffffff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(5,11,20,0.9);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(0,234,255,0.2);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #00eaff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00eaff;
+}
+
+.theme-btn {
+    border: 1px solid #00eaff;
+    background: transparent;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* HERO */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 8%;
+
+    background: #ffffff;
+
+    position: relative;
+}
+
+body.dark .hero {
+    background: #050b14;
+}
+
+.hero-content {
+    max-width: 650px;
+    animation: slideLeft 1s ease;
+}
+
+.hero-icon {
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+
+    border: 2px solid #00eaff;
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 15px #00eaff,
+        0 0 40px rgba(0,234,255,0.5);
+
+    animation: float 3s infinite ease-in-out;
+}
+
+.welcome {
+    margin-top: 25px;
+    color: #00eaff;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 80px);
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #00eaff;
+
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 30px rgba(0,234,255,0.6);
+}
+
+.hero h2 {
+    color: #00eaff;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border: 2px solid #00eaff;
+
+    margin-right: 10px;
+
+    transition: 0.4s;
+}
+
+.primary {
+    background: #00eaff;
+    color: #041018;
+}
+
+.secondary {
+    color: #00eaff;
+}
+
+.btn:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 0 15px #00eaff,
+        0 0 40px rgba(0,234,255,0.6);
+}
+
+
+/* PHOTO */
+
+.hero-photo {
+    position: relative;
+
+    width: 400px;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-ring {
+    width: 310px;
+    height: 310px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 4px solid #00eaff;
+
+    box-shadow:
+        0 0 15px #00eaff,
+        0 0 40px #00eaff,
+        0 0 80px rgba(0,234,255,0.5);
+
+    animation: photoFloat 4s infinite ease-in-out;
+
+    position: relative;
+    z-index: 2;
+}
+
+.photo-ring img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.6s;
+}
+
+.photo-ring:hover img {
+    transform: scale(1.12);
+}
+
+.photo-ring:hover {
+    box-shadow:
+        0 0 20px #00eaff,
+        0 0 50px #00eaff,
+        0 0 100px rgba(0,234,255,0.8);
+}
+
+.orbit {
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    border: 2px dashed #00eaff;
+
+    border-radius: 50%;
+
+    animation: rotate 8s linear infinite;
+}
+
+.orbit-two {
+    width: 390px;
+    height: 250px;
+    transform: rotate(50deg);
+
+    animation-duration: 10s;
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    font-size: 40px;
+}
+
+.section-title h2 {
+    color: #00eaff;
+    font-size: 38px;
+    margin-top: 10px;
+}
+
+
+/* ABOUT */
+
+.about-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-text {
+    background: rgba(255,255,255,0.04);
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(0,234,255,0.2);
+
+    line-height: 1.8;
+}
+
+.about-text h3 {
+    color: #00eaff;
+    margin-bottom: 15px;
+}
+
+.about-tags {
+    margin-top: 25px;
+}
+
+.about-tags span,
+.tech span {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    border: 1px solid #00eaff;
+
+    color: #00eaff;
+
+    margin: 5px;
+
+    font-size: 13px;
+}
+
+
+/* STATS */
+
+.stats-section {
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 20px;
+
+    padding: 60px 8%;
+
+    background: #07111f;
+}
+
+.stat {
+    text-align: center;
+
+    padding: 30px;
+
+    border: 1px solid rgba(0,234,255,0.2);
+
+    border-radius: 15px;
+}
+
+.stat h2 {
+    color: #00eaff;
+
+    font-size: 45px;
+}
+
+
+/* SKILLS */
+
+.skills-container {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill-name {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+.progress {
+    height: 10px;
+
+    background: #172333;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+
+    background: #00eaff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 15px #00eaff;
+
+    animation: progress 2s ease;
+}
+
+
+/* PROJECTS */
+
+.projects-section {
+    background: #07111f;
+}
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 25px;
+}
+
+.project-card {
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(0,234,255,0.2);
+
+    transition: 0.4s;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+
+    border-color: #00eaff;
+
+    box-shadow:
+        0 0 25px rgba(0,234,255,0.3);
+}
+
+.project-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: #00eaff;
+
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #cbd5e1;
+
+    line-height: 1.7;
+}
+
+
+/* EDUCATION */
+
+.timeline {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.timeline-item {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border-left: 3px solid #00eaff;
+
+    background: rgba(255,255,255,0.04);
+
+    border-radius: 10px;
+}
+
+.timeline-icon {
+    font-size: 30px;
+}
+
+.timeline-content h3 {
+    color: #00eaff;
+
+    margin-bottom: 10px;
+}
+
+.timeline-content span {
+    color: #00eaff;
+}
+
+
+/* EXPERIENCE */
+
+.experience-card {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid #00eaff;
+
+    background: rgba(0,234,255,0.04);
+}
+
+.experience-card h3 {
+    color: #00eaff;
+
+    margin-bottom: 15px;
+}
+
+
+/* CERTIFICATES */
+
+.certificate-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.certificate-card {
+    padding: 30px;
+
+    text-align: center;
+
+    border: 1px solid rgba(0,234,255,0.2);
+
+    border-radius: 18px;
+
+    transition: 0.4s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #00eaff;
+
+    box-shadow: 0 0 25px rgba(0,234,255,0.3);
+}
+
+.certificate-card div {
+    font-size: 45px;
+}
+
+.certificate-card h3 {
+    color: #00eaff;
+
+    margin: 15px 0;
+}
+
+
+/* ACHIEVEMENTS */
+
+.achievement-list {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.achievement-list div {
+    padding: 20px;
+
+    margin: 15px 0;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(0,234,255,0.2);
+
+    transition: 0.3s;
+}
+
+.achievement-list div:hover {
+    transform: translateX(10px);
+
+    border-color: #00eaff;
+}
+
+
+/* RESUME */
+
+.resume-section {
+    text-align: center;
+
+    padding: 90px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,234,255,0.1),
+            transparent
+        );
+}
+
+.resume-section h2 {
+    font-size: 35px;
+
+    color: #00eaff;
+
+    margin-bottom: 15px;
+}
+
+.resume-section p {
+    margin-bottom: 25px;
+}
+
+
+/* CONTACT */
+
+.contact-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+}
+
+.contact-info {
+    padding: 30px;
+
+    background: rgba(255,255,255,0.04);
+
+    border-radius: 20px;
+
+    line-height: 2;
+}
+
+.contact-info h3 {
+    color: #00eaff;
+
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(0,234,255,0.3);
+
+    background: #07111f;
+
+    color: white;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #00eaff;
+
+    box-shadow: 0 0 12px rgba(0,234,255,0.4);
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 40px;
+
+    background: #03070d;
+
+    color: #94a3b8;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #00eaff;
+
+    margin: 0 15px;
+
+    text-decoration: none;
+}
+
+
+/* TOP BUTTON */
+
+#topBtn {
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 2px solid #00eaff;
+
+    background: #07111f;
+
+    color: #00eaff;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    display: none;
+
+    z-index: 1000;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes float {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes photoFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes progress {
+
+    from {
+        width: 0;
+    }
+}
+
+
+/* SCROLL REVEAL */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition: 1s;
+}
+
+.reveal.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* LIGHT MODE */
+
+/* ================= LIGHT MODE ================= */
+
+body .navbar {
+    background: rgba(255,255,255,0.92);
+    border-bottom: 1px solid #dddddd;
+}
+
+body .nav-links a,
+body .logo {
+    color: #111111;
+}
+
+body .hero {
+    background: #ffffff;
+}
+
+body .hero-text {
+    color: #444444;
+}
+
+body .section {
+    background: #ffffff;
+}
+
+body .about-text,
+body .project-card,
+body .certificate-card,
+body .timeline-item,
+body .contact-info,
+body .experience-card,
+body .achievement-list div {
+    background: #ffffff;
+    color: #111111;
+    border-color: #dddddd;
+}
+
+body .projects-section,
+body .stats-section {
+    background: #f5f5f5;
+}
+
+body .progress {
+    background: #dddddd;
+}
+
+body input,
+body textarea {
+    background: #ffffff;
+    color: #111111;
+    border-color: #cccccc;
+}
+
+
+/* ================= NIGHT MODE ================= */
+
+body.dark .navbar {
+    background: rgba(5,11,20,0.92);
+    border-bottom: 1px solid rgba(0,234,255,0.2);
+}
+
+body.dark .nav-links a,
+body.dark .logo {
+    color: #ffffff;
+}
+
+body.dark .hero,
+body.dark .section {
+    background: #050b14;
+}
+
+body.dark .hero-text {
+    color: #cbd5e1;
+}
+
+body.dark .about-text,
+body.dark .project-card,
+body.dark .certificate-card,
+body.dark .timeline-item,
+body.dark .contact-info,
+body.dark .experience-card,
+body.dark .achievement-list div {
+    background: rgba(255,255,255,0.04);
+    color: #ffffff;
+    border-color: rgba(0,234,255,0.2);
+}
+
+body.dark .projects-section,
+body.dark .stats-section {
+    background: #07111f;
+}
+
+body.dark .progress {
+    background: #172333;
+}
+
+body.dark input,
+body.dark textarea {
+    background: #07111f;
+    color: #ffffff;
++ }
+/* HERO TEXT - DAY MODE */
+.hero h1 {
+    color: #111111;
+}
+
+.hero h1 span {
+    color: #0077cc;
+}
+
+.hero h2 {
+    color: #0077cc;
+}
+
+.hero-text {
+    color: #333333;
+}
+
+/* HERO TEXT - NIGHT MODE */
+body.dark .hero h1 {
+    color: #ffffff;
+}
+
+body.dark .hero h1 span {
+    color: #00d9ff;
+}
+
+body.dark .hero h2 {
+    color: #00d9ff;
+}
+
+body.dark .hero-text {
+    color: #d6dce5;
+}
+/* =====================================================
+   COMPLETE WEBSITE BLUE/CYAN → DARK BOLD BLACK
+   ===================================================== */
+
+/* All common headings and highlighted text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero h1,
+.hero h2,
+.hero h1 span,
+.section-title,
+.section-title h2,
+.logo,
+.nav-links a,
+.skill-name,
+.timeline-content span,
+.project-card h3,
+.certificate-card h3,
+.experience-card h3,
+.contact-info h3 {
+    color: #111111 !important;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   LINKS
+   ===================================================== */
+
+a {
+    color: #111111 !important;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   SKILL PROGRESS BARS
+   ===================================================== */
+
+.progress-bar,
+.progress-fill,
+.progress-bar span {
+    background: #111111 !important;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+button,
+.btn,
+.theme-btn {
+    color: #111111 !important;
+    border-color: #111111 !important;
+}
+
+
+/* =====================================================
+   ICONS
+   ===================================================== */
+
+i,
+.icon,
+.hero-icon,
+.social-links a {
+    color: #111111 !important;
+}
+
+
+/* =====================================================
+   STATS / NUMBERS
+   ===================================================== */
+
+.stat-number,
+.counter,
+.stats-section h2,
+.stats-section span {
+    color: #111111 !important;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   PROJECTS / CERTIFICATES / ACHIEVEMENTS
+   ===================================================== */
+
+.project-card h3,
+.certificate-card h3,
+.achievement-list h3,
+.experience-card h3 {
+    color: #111111 !important;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer a,
+footer h3,
+footer span {
+    color: #111111 !important;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   NIGHT MODE
+   Black text ko dark background par invisible hone se
+   bachane ke liye NIGHT MODE me white rakhenge.
+   ===================================================== */
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark .hero h1,
+body.dark .hero h2,
+body.dark .hero h1 span,
+body.dark .section-title,
+body.dark .section-title h2,
+body.dark .logo,
+body.dark .nav-links a,
+body.dark .skill-name,
+body.dark .timeline-content span,
+body.dark .project-card h3,
+body.dark .certificate-card h3,
+body.dark .experience-card h3,
+body.dark .contact-info h3,
+body.dark a,
+body.dark i,
+body.dark .icon,
+body.dark .hero-icon,
+body.dark .social-links a,
+body.dark .stat-number,
+body.dark .counter {
+    color: #ffffff !important;
+}
+
+
+/* Night mode progress bars */
+body.dark .progress-bar,
+body.dark .progress-fill,
+body.dark .progress-bar span {
+    background: #ffffff !important;
+}
+
+
+/* Night mode buttons */
+body.dark button,
+body.dark .btn,
+body.dark .theme-btn {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+
+/* Night mode footer */
+body.dark footer a,
+body.dark footer h3,
+body.dark footer span {
+    color: #ffffff !important;
+}
+/* SOCIAL LINKS */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: inline-block;
+    color: #111111 !important;
+    font-weight: 700;
+    font-size: 17px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* NIGHT MODE */
+body.dark .social-links a {
+    color: #ffffff !important;
+}
+/* =========================================
+   FOOTER + SOCIAL LINKS - FINAL FIX
+========================================= */
+
+/* DAY MODE */
+footer {
+    background: #f1f1f1 !important;
+    color: #111111 !important;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    color: #111111 !important;
+}
+
+.social-links {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 30px !important;
+    flex-wrap: wrap !important;
+    margin: 20px 0 !important;
+}
+
+.social-links a {
+    color: #111111 !important;
+    background: transparent !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+/* Hover */
+.social-links a:hover {
+    color: #333333 !important;
+    text-decoration: underline !important;
+}
+
+
+/* =========================================
+   NIGHT MODE
+========================================= */
+
+body.dark footer {
+    background: #03070d !important;
+    color: #ffffff !important;
+}
+
+body.dark footer p {
+    color: #ffffff !important;
+}
+
+body.dark .social-links a {
+    color: #ffffff !important;
+    background: transparent !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+body.dark .social-links a:hover {
+    color: #00d9ff !important;
+}
