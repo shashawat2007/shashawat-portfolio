@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 0; io     ``````````++++++++++++++++++++++++++++
     box-sizing: border-box;
 }
 
@@ -1210,4 +1210,191 @@ body.dark .social-links a {
 
 body.dark .social-links a:hover {
     color: #00d9ff !important;
+}
+/* =====================================================
+   MOBILE RESPONSIVE FIX
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Prevent sections from becoming wider than phone */
+section,
+header,
+footer,
+main {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+        padding: 15px 20px !important;
+        width: 100%;
+    }
+
+    .nav-links {
+        gap: 12px !important;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 13px !important;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: auto !important;
+        width: 100%;
+        padding: 50px 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center;
+        gap: 30px !important;
+    }
+
+    .hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .hero h1 {
+        font-size: 34px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .hero h2 {
+        font-size: 22px !important;
+    }
+
+    .hero-text {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* PROFILE IMAGE */
+    .hero-image,
+    .profile-image {
+        max-width: 100% !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .hero-image img,
+    .profile-image img {
+        width: 180px !important;
+        height: 180px !important;
+        max-width: 180px !important;
+        object-fit: cover !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    /* SECTIONS */
+    section {
+        width: 100% !important;
+        padding: 50px 20px !important;
+    }
+
+    .section-title {
+        font-size: 28px !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* CARDS */
+    .project-card,
+    .certificate-card,
+    .experience-card,
+    .stat-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* GRIDS */
+    .projects-grid,
+    .skills-grid,
+    .certificates-grid,
+    .stats-grid {
+        width: 100% !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* TEXT */
+    p {
+        max-width: 100% !important;
+        line-height: 1.6;
+    }
+
+    /* BUTTONS */
+    .btn {
+        max-width: 100%;
+        display: inline-block;
+    }
+
+    /* FOOTER */
+    footer {
+        width: 100% !important;
+        padding: 30px 20px !important;
+    }
+
+    .social-links {
+        gap: 18px !important;
+        flex-wrap: wrap !important;
+    }
+}
+
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 35px 15px !important;
+    }
+
+    section {
+        padding: 40px 15px !important;
+    }
+
+    .hero h1 {
+        font-size: 29px !important;
+    }
+
+    .hero h2 {
+        font-size: 20px !important;
+    }
+
+    .hero-image img,
+    .profile-image img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .section-title {
+        font-size: 25px !important;
+    }
 }
