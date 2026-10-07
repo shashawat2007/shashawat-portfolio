@@ -1398,3 +1398,42 @@ main {
         font-size: 25px !important;
     }
 }
+/* FINAL HERO SPACING FIX */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 25px 15px !important;
+        gap: 15px !important;
+    }
+
+    .hero h1 {
+        margin: 5px 0 !important;
+    }
+
+    .hero-icon {
+        margin-bottom: 5px !important;
+    }
+
+    .hero-buttons {
+        margin-top: 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 20px 12px !important;
+        gap: 10px !important;
+    }
+
+    .hero h1 {
+        margin: 3px 0 !important;
+    }
+
+    .hero h2 {
+        margin-bottom: 10px !important;
+    }
+
+    .hero-buttons {
+        margin-top: 12px !important;
+    }
+}
